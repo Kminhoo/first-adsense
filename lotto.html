@@ -19,8 +19,12 @@
 		<!-- css -->
 		<link rel="stylesheet" href="./css/main.css">
 
+		<!-- lotto css -->
+		<link rel="stylesheet" href="./css/lotto.css">
+
 		<script defer src="./js/main.js"></script>
-		<title>Minu's Web</title>
+		<script defer src="./js/lotto.js"></script>
+		<title>Minu's lotto(로또 번호 생성기)</title>
 	</head>
 	<body>
 		<!-- wrap -->
@@ -31,7 +35,7 @@
 			<header class="header">
 				<div class="inner">
 
-					<h1>Minu's Web</h1>
+					<h1>Hoostory</h1>
 					<ul class="menu">
 						<li><a href="./index.html">Home</a></li>
 						<li><a href="#">About</a></li>
@@ -54,14 +58,15 @@
 			<main class="main">
 				<div class="inner">
 
-					<div class="figures">
-						<figure>
-							<img src="./images/doll.png" alt="나무 인형 메인">
-							<figcaption class="main-name">Minu's Web Service</figcaption>
-							<figcaption class="bgtext one">계속 업데이트 될거라구!</figcaption>
-							<figcaption class="bgtext two">로또번호 추천 부터 게임까지!</figcaption>
-						</figure>
-					</div>
+					<div class="lotto-box">
+						<h1></h1>
+            <h2>이번주 1등 번호를 뽑아볼까?</h2>
+            <div class="numbers"></div>
+						<div class="btn-box">
+							<button id="start">Start</button>
+							<button id="reset">Reset</button>
+						</div>
+        	</div>
 
 				</div>
 			</main>
@@ -74,6 +79,5 @@
 			</footer>
 
 		</div>
-
 	</body>
 </html>
