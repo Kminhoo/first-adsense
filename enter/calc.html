@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+	<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="게임, 복권, 룰렛, 계산기, 욕하기, 수익형 웹 등 다양한 서비스를 제공하는 웹">
+		<meta name="keywords" content="게임, 로또, 연금, 복권, 계산기, 공학용 계산기, 수익형 웹, 미누, 후스토리">
+		<meta name="author" content="Minhoo kim">
+		<!-- google adsense -->
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1499243670203751" crossorigin="anonymous"></script>
+
+		<!-- google font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+		
+		<!-- reset css -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+
+		<!-- css -->
+		<link rel="stylesheet" href="../css/main.css">
+
+		<style>
+			.calculator {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 5px;
+        max-width: 300px;
+        margin: 0 auto;
+        padding: 10px;
+        border: 2px solid #ddd;
+        border-radius: 10px;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      }
+      .result {
+        grid-column: 1 / -1;
+        font-size: 1.5rem;
+        padding: 10px;
+        text-align: right;
+        background-color: #eee;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+      }
+      button {
+        font-size: 1.2rem;
+        padding: 10px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #eee;
+      }
+			button:hover {
+				background-color: #ddd;
+				box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);	
+			}		
+      button:active {
+        background-color: #ccc;
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
+      }
+		</style>
+
+		<script defer src="./js/main.js"></script>
+		<title>Minu's Web</title>
+	</head>
+	<body>
+		<!-- wrap -->
+		<div class="wrap">
+
+			<!-- header -->
+
+			<header class="header">
+				<div class="inner">
+
+					<h1>Minu's Web</h1>
+					<ul class="menu">
+						<li><a href="./index.html">Home</a></li>
+						<li><a href="#">About</a></li>
+					</ul>
+
+				</div>
+			</header>
+
+			<!-- navigation -->
+			<nav class="nav">
+				<a href="./enter/lotto.html" target="_self">로또 번호 추천</a>
+				<a href="#">연금복권 번호 추천</a>
+				<a href="#">점심 메뉴 룰렛</a>
+				<a href="#">계산기</a>
+				<a href="#">공학용 계산기</a>
+				<a href="#">메모장</a>
+			</nav>
+
+			<!-- main -->
+			<main class="main">
+				<div class="inner">
+
+					<div class="calculator">
+						<div class="result">
+							<input type="text" id="result" />
+						</div>
+						<button onclick="addToResult('1')">1</button>
+						<button onclick="addToResult('2')">2</button>
+						<button onclick="addToResult('3')">3</button>
+						<button onclick="addToResult('+')">+</button>
+						<button onclick="addToResult('4')">4</button>
+						<button onclick="addToResult('5')">5</button>
+						<button onclick="addToResult('6')">6</button>
+						<button onclick="addToResult('-')">-</button>
+						<button onclick="addToResult('7')">7</button>
+						<button onclick="addToResult('8')">8</button>
+						<button onclick="addToResult('9')">9</button>
+						<button onclick="addToResult('*')">*</button>
+						<button onclick="addToResult('0')">0</button>
+						<button onclick="calculate()">=</button>
+						<button onclick="clearResult()">C</button>
+						<button onclick="addToResult('/')">/</button>
+					</div>
+
+				</div>
+			</main>
+
+			<!-- footer -->
+			<footer class="footer">
+				<div class="inner">
+					<h3>© <span class="date"></span> Minu's, Inc</h3>
+				</div>
+			</footer>
+
+		</div>
+
+		<script>
+			// 계산기 기능 구현을 위한 JavaScript 코드
+		let result = document.getElementById("result");
+
+function addToResult(value) {
+	result.value += value;
+}
+
+function clearResult() {
+	result.value = "";
+}
+
+function calculate() {
+	let expression = result.value;
+	if (expression) {
+		let lastChar = expression.slice(-1);
+		if (lastChar === "+" || lastChar === "-" || lastChar === "*" || lastChar === "/") {
+			expression = expression.slice(0, -1);
+		}
+		result.value = eval(expression);
+	}
+}
+		</script>
+	</body>
+</html>
