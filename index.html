@@ -1,83 +1,109 @@
 <!DOCTYPE html>
-	<html lang="ko">
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="게임, 복권, 룰렛, 계산기, 욕하기, 수익형 웹 등 다양한 서비스를 제공하는 웹">
-		<meta name="keywords" content="게임, 로또, 연금, 복권, 계산기, 공학용 계산기, 수익형 웹, 미누, 후스토리">
-		<meta name="author" content="Minhoo kim">
-		
-		<meta name="google-site-verification" content="En3dI3Ztv7oOYEiu06BAwaXfMtshpD9SnA3sPUCx19Q" />
-		<!-- google adsense -->
-		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1499243670203751" crossorigin="anonymous"></script>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="대출 이자 계산기 로또 번호 추천 점심 메뉴 룰렛 주식 배당금 계산기 랜덤 이름 생성기등 다양한 웹 서비스를 즐겨보세요.">
+  <meta name="keywords" content="대출 이자 계산기, 로또 번호 추천, 점심 메뉴 추천, 주식 배당금 계산기, 랜덤 이름 생성기, 연금 복권 추천">
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Hoostory" />
+  <meta property="og:title" content="Hoostroy website" />
+  <meta property="og:description" content="대출 계산기, 점심 메뉴 룰렛 등등 다양한 웹서비스를 제공합니다. 즐거움을 느껴보세요." />
+  <meta property="og:image" content="/images/ogimage.png" />
+  <meta property="og:url" content="https://hoostory.com" />
+  <meta property="twitter:card" content="summary" />
+  <meta property="twitter:site" content="Hoostory" />
+  <meta property="twitter:title" content="Hoostroy website" />
+  <meta property="twitter:description" content="대출 계산기, 점심 메뉴 룰렛 등등 다양한 웹서비스를 제공합니다. 즐거움을 느껴보세요." />
+  <meta property="twitter:image" content="/images/twittercardimage.png" />
+  <meta property="twitter:url" content="https://hoostory.com" />
+  <meta name="robots" content="index,follow">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1499243670203751" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,500;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet" href="./index.css">
+  <script defer src="./index.js"></script>
+  <title>Hoostory</title>
+</head>
+<body>
+  <div class="wrap">
 
-		<!-- google font -->
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-		
-		<!-- reset css -->
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <header>
+      <div class="inner-head">
+        <h1 class="title">Minus</h1>
+        <div class="menu">
+          <div class="drop-menu">
+            <button class="dropbtn">
+              <span class="material-symbols-outlined">
+                arrow_drop_down
+              </span>
+              모든 서비스
+            </button>
+            <div class="dropdown-content">
+              <a href="/">
+                <span class="material-symbols-outlined">
+                  home
+                </span>
+                HOME
+              </a>
+              <a href="/loanCalc.html">
+                <span class="material-symbols-outlined">
+                  calculate
+                </span>
+                대출 이자 계산기
+              </a>
+              <a href="/roulette.html">
+                <span class="material-symbols-outlined">
+                  restaurant
+                </span>
+                점심 메뉴 룰렛
+              </a>
+            </div>
+          </div>
+          <div class="share" id="share">
+            <span class="material-symbols-outlined">
+              share
+            </span>
+            공유하기
+          </div>
+        </div>
+      </div>
+    </header>
 
-		<!-- css -->
-		<link rel="stylesheet" href="./css/main.css">
 
-		<script defer src="./js/main.js"></script>
-		<title>Minu's Web</title>
-	</head>
-	<body>
-		<!-- wrap -->
-		<div class="wrap">
+    <main>
+      <div class="inner-main">
 
-			<!-- header -->
+        <div class="description">
+          <h2><span>Minus :	&#41;</span><br />어플 설치 없이, 즐길 수 있는 편안한 일상<br />간편하게 웹서비스를 즐겨보세요.</h2>
+        </div>
 
-			<header class="header">
-				<div class="inner">
+        <div class="search-box">
+          <div class='input-box'>
+            <div class="InputContainer">
+              <input type="text" name="text" class="input" id="input" placeholder="찾으려는 서비스를 검색하세요!" />
+              
+              <label for="input" class="labelforsearch">
+                <svg viewBox="0 0 512 512" class="searchIcon"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path></svg>
+              </label>
 
-					<h1>Minu's Web</h1>
-					<ul class="menu">
-						<li><a href="./index.html">Home</a></li>
-						<li><a href="#">About</a></li>
-					</ul>
+              <div class="border"></div>
 
-				</div>
-			</header>
+            </div>
 
-			<!-- navigation -->
-			<nav class="nav">
-				<a href="./enter/lotto.html" target="_self">로또 번호 추천</a>
-				<a href="#">연금복권 번호 추천</a>
-				<a href="#">점심 메뉴 룰렛</a>
-				<a href="#">계산기</a>
-				<a href="#">공학용 계산기</a>
-				<a href="#">메모장</a>
-			</nav>
+            <div id="auto-result">
 
-			<!-- main -->
-			<main class="main">
-				<div class="inner">
+            </div>
+            <h3>대출 이자 계산기부터 점심메뉴추천 룰렛 등 다양한 즐거움을 찾아보세요.</h3>
+          </div>
+        </div>
 
-					<div class="figures">
-						<figure>
-							<img src="./images/doll.png" alt="나무 인형 메인">
-							<figcaption class="main-name">Minu's Web Service</figcaption>
-							<figcaption class="bgtext one">계속 업데이트 될거라구!</figcaption>
-							<figcaption class="bgtext two">로또번호 추천 부터 게임까지!</figcaption>
-						</figure>
-					</div>
+      </div>
+    </main>
 
-				</div>
-			</main>
-
-			<!-- footer -->
-			<footer class="footer">
-				<div class="inner">
-					<h3>© <span class="date"></span> Minu's, Inc</h3>
-				</div>
-			</footer>
-
-		</div>
-
-	</body>
+  </div>
+</body>
 </html>
