@@ -1,0 +1,182 @@
+main {
+  box-sizing: border-box;
+  width: 100%;
+  height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1C1C1B;
+  overflow: hidden;
+  /* background remove */
+}
+
+.main-inner {
+  /* background-color: orange; */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 2rem;
+}
+
+.main-inner .main-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.main-desc .desc-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.main-title {
+  font-size: 6rem;
+}
+
+.desc-text p {
+  font-size: 3rem;
+}
+
+.start-hover {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.start-hover {
+  width: 16rem;
+  /* 여기수정 */
+  height: auto;
+}
+
+.start-hover .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  box-shadow: 0 0 5px 1px white;
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #282936;
+  border-radius: 1.625rem;
+}
+
+.start-hover .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+
+.start-hover .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+
+.start-hover .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.29rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+
+.start-hover .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color:blanchedalmond;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.start-hover:hover .circle {
+  width: 100%;
+  box-shadow: 0 0 10px 2px white;
+}
+
+.start-hover:hover .button-text {
+  transform: translate(-1.7rem, 0);
+}
+
+.start-hover:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(13rem, 0); 
+  /* 여기 수정 */
+}
+
+.start-hover:active .circle .icon.arrow {
+  transform: translate(9.5rem, 0);
+  transition: all 0.3s;
+}
+
+.start-hover:active .circle {
+  transform: scale(0.9);
+  transition: all 0.3s;
+  box-shadow: 0 0 5px 0.5px white;
+}
+
+.start-hover:hover .button-text {
+  color: #fff;
+}
+
+.start-hover:active .button-text {
+  color: rgba(255, 255, 255, 0.459);
+}
+
+@media (max-width: 768px) {
+  .main-inner {
+    max-width: 80%;
+  }
+  .main-title {
+    font-size: 4rem;
+  }
+  .desc-text p {
+    font-size: 2rem;
+  }
+  .start-hover .button-text {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-inner {
+    max-width: 80%;
+  }
+  .main-title {
+    font-size: 2rem;
+  }
+  .desc-text p {
+    font-size: 1.2rem;
+  }
+  .start-hover .button-text {
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+}

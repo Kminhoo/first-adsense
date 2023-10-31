@@ -1,0 +1,120 @@
+section {
+  color: black;
+}
+
+.sect-inner {
+  width: 100%;
+  height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+
+.calc-wrap {
+  background-color: rebeccapurple;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 3rem;
+  gap: 1.5rem;
+}
+
+.calc-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.calc-title {
+  font-size: 3.5rem;
+}
+
+.calc-desc p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.calc-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+/* .row {
+  border: 1px solid red;
+}
+
+.row span {
+  display: inline-block;
+  background-color: orange;
+  padding: 5px 5px;
+  border: none;
+}
+
+.row input {
+  display: inline-block;
+  padding: 5px 5px;
+  border: none;
+  height: 100%;
+} */
+
+/* LoanCalc.css */
+
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: end;
+  padding: 0;
+}
+.row {
+  position: relative;
+  width: 300px;
+  text-align: end;
+}
+
+.row input[type="text"] {
+  font-size: 20px;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  padding: 5px 0;
+  background-color: transparent;
+  outline: none;
+}
+
+.row .label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #ccc;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.row input[type="text"]:focus ~ .label,
+.row input[type="text"]:valid ~ .label {
+  top: -20px;
+  font-size: 16px;
+  color: #333;
+}
+
+.row .underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #333;
+  transform: scaleX(0);
+  transition: all 0.3s ease;
+}
+
+.row input[type="text"]:focus ~ .underline,
+.row input[type="text"]:valid ~ .underline {
+  transform: scaleX(1);
+}
