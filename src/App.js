@@ -1,32 +1,20 @@
 import React from 'react'
+import { Route, Routes } from 'react-router-dom'
 
-import { Outlet, Route, Routes } from 'react-router-dom'
-
-import Headers from './components/Header'
-import MainPage from './pages/MainPage'
-import LoanCalc from './pages/LoanCalc'
 import './App.css'
-
-
-const Layout = () => {
-  return (
-    <>
-      <Headers />
-
-      <Outlet />
-    </>
-  )
-}
+import Header from './components/Header'
+import MainPage from './pages/MainPage'
+import Footer from './components/Footer'
 
 const App = () => {
   return (
-    <div className='app'>
-      <Layout />
+    <>
+      <Header />
       <Routes>
         <Route path='/' element={<MainPage />} />
-        <Route path='/loancalc' element={<LoanCalc />} />
       </Routes>
-    </div>
+      <Footer />
+    </>
   )
 }
 
