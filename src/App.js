@@ -5,6 +5,7 @@ import './App.css'
 import Header from './components/Header'
 import MainPage from './pages/MainPage'
 import Footer from './components/Footer'
+import LoanCalc from './pages/LoanCalc'
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <Header />
       <Routes>
         <Route path='/' element={<MainPage />} />
+        <Route path='/loanCalc' element={<LoanCalc />} />
       </Routes>
       <Footer />
     </>

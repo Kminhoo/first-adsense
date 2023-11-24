@@ -167,3 +167,59 @@ const LoanCalc = () => {
 }
 
 export default LoanCalc
+
+
+// import React, { useState } from 'react'
+
+// import './CalcPage.css'
+
+// const CalcPage = () => {
+
+//   const [calcDesc, setCalcDesc] = useState('각 대출 실행 방식을 클릭하면 상세한 내용을 확인할 수 있습니다.')
+
+//   const calcDescFunc = (e) => {
+//     switch (e.target.innerText) {
+//       case "원리금 균등":
+//         setCalcDesc("대출 원금과 이자를 합친 금액 즉 원리금을 만기일까지 균등하게 상환하는 대출 상환 방식이다.");
+//         break;
+//       case "원금 균등":
+//         setCalcDesc("원금 균등에 대한 설명");
+//         break;
+//       case "만기 일시":
+//         setCalcDesc("만기 일시에 대한 설명");
+//         break;
+//       default:
+//         setCalcDesc('각 대출 실행 방식을 클릭하면 상세한 내용을 확인할 수 있습니다.')
+//     }
+//   }
+
+//   return (
+//     <main className='calc-main'>
+//       <div className='calc-inner'>
+
+//         <div className='calc-wrap'>
+
+//           <div className='calc-text'>
+//             <h1>&#128184; 대출 이자 계산기</h1>
+//             <p>원리금 균등, 원금 균등, 만기 일시등 다양한 방법으로 대출 예상 금액을 조회하고 계산해보세요.</p>
+//           </div>
+
+//           <div className='calc-desc'>
+//             <div className='calc-btn'>
+//               <button onClick={(e) => calcDescFunc(e)}>원리금 균등</button>
+//               <button onClick={(e) => calcDescFunc(e)}>원금 균등</button>
+//               <button onClick={(e) => calcDescFunc(e)}>만기 일시</button>
+//             </div>
+//             <div className='calc-btn-desc'>
+//               <p>{calcDesc}</p>
+//             </div>
+//           </div>
+
+//         </div>
+
+//       </div>
+//     </main>
+//   )
+// }
+
+// export default CalcPage
