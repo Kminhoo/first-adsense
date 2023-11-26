@@ -5,6 +5,7 @@ header {
   right: 0;
   left: 0;
   border-bottom: 1px solid var(--text-100);
+  z-index: 1000;
 }
 
 .overlay {
