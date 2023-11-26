@@ -172,6 +172,7 @@
 
 import React, { useState } from 'react'
 import LoanResult from '../components/LoanResult'
+import DisplayAds from '../components/DisplayAds'
 
 import { loanDesc } from '../serviceData'
 import { calculateLoan, calculateEqualPrincipalAndInterest, calculateMaturityRepayment  } from '../serviceData/CalcFunc'
@@ -390,7 +391,9 @@ const CalcPage = () => {
 
           </div>
 
-          {/* 여긴 애드센스 컴포넌트 */}
+          <div className='google-ads'>
+            <DisplayAds />
+          </div>
 
         </div>
       </section>
