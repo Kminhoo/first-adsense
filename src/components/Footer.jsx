@@ -2,7 +2,7 @@ import React from 'react'
 
 import './Footer.css'
 
-import data from '../serviceData'
+import { serviceData } from '../serviceData'
 import { Link } from 'react-router-dom'
 
 const Footer = () => {
@@ -13,13 +13,13 @@ const Footer = () => {
           <ul className='service-list'>
             <h3>제공 서비스</h3>
             <li>
-              <Link className='list-menu' to={data.loanCalc.link}>{data.loanCalc.title}</Link>
+              <Link className='list-menu' to={serviceData.loanCalc.link}>{serviceData.loanCalc.title}</Link>
             </li>
             <li>
-              <Link className='list-menu' to={data.roulette.link}>{data.roulette.title} &#128293;</Link>
+              <Link className='list-menu' to={serviceData.roulette.link}>{serviceData.roulette.title} &#128293;</Link>
             </li>
             <li>
-              <Link className='list-menu' to={data.lotto.link}>{data.lotto.title} &#128293;</Link>
+              <Link className='list-menu' to={serviceData.lotto.link}>{serviceData.lotto.title} &#128293;</Link>
             </li>
           </ul>
 

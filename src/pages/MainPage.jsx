@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 
-import data from '../serviceData/index'
+import { serviceData } from '../serviceData/index'
 
 import './MainPage.css'
 import Service from '../components/Service'
@@ -59,9 +59,9 @@ const MainPage = () => {
           </div>
 
           <div className='service-container'>
-            <Service data={data.loanCalc} />
-            <Service data={data.roulette} />
-            <Service data={data.lotto} />
+            <Service data={serviceData.loanCalc} />
+            <Service data={serviceData.roulette} />
+            <Service data={serviceData.lotto} />
           </div>
 
         </div>

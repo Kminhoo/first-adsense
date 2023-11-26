@@ -1,4 +1,4 @@
-const data = {
+export const serviceData = {
   home : {
     title: 'Home',
     desc: '대출이자 계산기, 점심 메뉴 추천, 로또 번호 생성등 다양한 서비스를 제공하는 Minus 메인페이지',
@@ -21,4 +21,9 @@ const data = {
   },
 }
 
-export default data
+export const loanDesc = {
+  default: "각 대출 실행방식 버튼을 클릭하면 상세한 내용을 확인할 수 있습니다.",
+  principalInterest: "대출 원금과 이자를 합친 금액(원리금)을 만기일까지 균등한 금액으로 대출을 상환하는 방식입니다.",
+  principal: "대출 원금은 매월 동일하게 상환하고, 남은 대출 원금에 대한 이자를 더해 상환하는 방식으로 매달 상환하는 금액이다른 방식입니다.",
+  dateOfTime: "대출원금을 만기일에 모두 상환하는 방식으로 대출기간에는 이자만 납부하는 이자부담이 큰 상환방식입니다."
+}
