@@ -5,6 +5,7 @@ import { serviceData } from '../serviceData/index'
 import './MainPage.css'
 import Service from '../components/Service'
 import DisplayAds from '../components/DisplayAds'
+import { Helmet } from 'react-helmet-async'
 
 const MainPage = () => {
 
@@ -17,6 +18,22 @@ const MainPage = () => {
 
   return (
     <main>
+      <Helmet>
+        <title>Hoostory Main</title>
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Hoostory" />
+        <meta property="og:title" content="Hoostroy website" />
+        <meta property="og:description" content="대출 계산기, 점심 메뉴 룰렛 등등 다양한 웹서비스를 제공합니다. 즐거움을 느껴보세요." />
+        <meta property="og:image" content="/images/ogimage.png" />
+        <meta property="og:url" content="https://hoostory.com" />
+
+        <meta property="twitter:card" content="summary" />
+        <meta property="twitter:site" content="Hoostory" />
+        <meta property="twitter:title" content="Hoostroy website" />
+        <meta property="twitter:description" content="대출 계산기, 점심 메뉴 룰렛 등등 다양한 웹서비스를 제공합니다. 즐거움을 느껴보세요." />
+        <meta property="twitter:image" content="/images/twittercardimage.png" />
+        <meta property="twitter:url" content="https://hoostory.com" />
+      </Helmet>
       <section className='hero'>
 
         <div className='hero-inner'>

@@ -1,0 +1,13 @@
+.calc-result-dateOfTime {
+  border: 1px solid black;
+  padding: 1rem 0.5rem;
+  border-radius: 5px;
+}
+
+.calc-result-dateOfTime p {
+  text-align: center;
+}
+
+.calc-result-dateOfTime p span {
+  color: red;
+}

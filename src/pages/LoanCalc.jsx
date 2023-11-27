@@ -5,6 +5,7 @@ import DisplayAds from '../components/DisplayAds'
 import { loanDesc } from '../serviceData'
 import { calculateLoan, calculateEqualPrincipalAndInterest, calculateMaturityRepayment  } from '../serviceData/CalcFunc'
 import './LoanCalc.css'
+import { Helmet } from 'react-helmet-async'
 
 const CalcPage = () => {
 
@@ -108,6 +109,7 @@ const CalcPage = () => {
 
   // total Calc event func
   const totalCalc = () => {
+
     let result = null;
 
     if (principalInterest) {
@@ -121,6 +123,11 @@ const CalcPage = () => {
     if (dateOfTime) {
       result = calculateMaturityRepayment(loan.raw, loanRate, loanTerm)
       console.log(result)
+    }
+
+    if (!loan.raw || !loanTerm || !loanRate || (!principalInterest && !principal && !dateOfTime)) {
+      alert('대출금, 대출기간, 대출비율 혹은 상환방식을 선택해주세요.');
+      return;
     }
 
     setResultData(result)
@@ -141,6 +148,10 @@ const CalcPage = () => {
   }
 
   return (
+    <>
+    <Helmet>
+      <title>대출 이자 계산기</title>
+    </Helmet>
     <main className='main'>
       <section className='loan-calc'>
         <div className='calc-inner'>
@@ -244,6 +255,7 @@ const CalcPage = () => {
         </div>
       </section>
     </main>
+    </>
   )
 }
 
