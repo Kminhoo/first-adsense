@@ -11,3 +11,33 @@
 .calc-result-dateOfTime p span {
   color: red;
 }
+
+.calc-result-principal {
+  border: 1px solid black;
+  padding: 1rem 0.5rem;
+  border-radius: 5px;
+  position: relative;
+}
+
+.calc-result-principal p {
+  text-align: start;
+  line-height: 1.5;
+}
+
+.calc-result-principal p span {
+  color: red;
+}
+
+.calc-result-principal button {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  padding: 0.5rem;
+  outline: none;
+  border: none;
+}
+
+.calc-result-principal button:active {
+  background-color: black;
+  color: white;
+}

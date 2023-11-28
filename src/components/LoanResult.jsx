@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import './LoanResult.css'
+
+import PrincipalMonth from './PrincipalMonth'
 
 const LoanResult = ({
   result, //결과
@@ -9,6 +11,14 @@ const LoanResult = ({
   dateOfTiem, //만기일
   loan // 대출금
 }) => {
+  // principal month active
+  const [principalActive, setPrincipalActive] = useState(false);
+
+  // principal month active func
+  const activePrincipal = () => {
+    setPrincipalActive(true)
+  }
+
   if (principalInterest) {
     return (
       <div className='calc-result'>
@@ -20,11 +30,19 @@ const LoanResult = ({
   }
   if (principal) {
     return (
-      <div className='calc-result'>
-        <p>대출 원금은 {loan.display}원 입니다.</p>
-        <p>총 이자는 {result.totalInterest.toLocaleString('Ko-KR')}원 입니다.</p>
-        <p>총 상환 금액은 {(loan.raw + result.totalInterest).toLocaleString('Ko-KR')}원 입니다.</p>
-      </div>
+      <>
+        <div className='calc-result-principal'>
+          <p><span>{loan.display}</span>원을, {result.repaymentSchedule.length}개월로 원금균등 대출을 실행한다면,</p>
+          <p>대출 원금 : <span>{loan.display}</span> 원</p>
+          <p>대출 이자 : <span>{result.totalInterest.toLocaleString('ko-KR')}</span> 원</p>
+          <p>총 상환 금액 : <span>{Math.ceil(loan.raw + result.totalInterest).toLocaleString('ko-KR')}</span> 원</p>
+          <button onClick={activePrincipal}>월별 상환 금액보기</button>
+        </div>
+        {principalActive && (<PrincipalMonth 
+          result={result.repaymentSchedule} 
+          principalActive={setPrincipalActive}
+        />)}
+      </>
     )
   }
   if (dateOfTiem) {
