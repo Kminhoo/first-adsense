@@ -1,4 +1,6 @@
-.calc-result-dateOfTime {
+.calc-result-dateOfTime,
+.calc-result-principal,
+.calc-result-principalOfInterest {
   border: 1px solid black;
   padding: 1rem 0.5rem;
   border-radius: 5px;
@@ -12,23 +14,24 @@
   color: red;
 }
 
-.calc-result-principal {
-  border: 1px solid black;
-  padding: 1rem 0.5rem;
-  border-radius: 5px;
+.calc-result-principal,
+.calc-result-principalOfInterest {
   position: relative;
 }
 
-.calc-result-principal p {
+.calc-result-principal p,
+.calc-result-principalOfInterest p {
   text-align: start;
   line-height: 1.5;
 }
 
-.calc-result-principal p span {
+.calc-result-principal p span,
+.calc-result-principalOfInterest p span {
   color: red;
 }
 
-.calc-result-principal button {
+.calc-result-principal button,
+.calc-result-principalOfInterest button {
   position: absolute;
   bottom: 1rem;
   right: 1rem;

@@ -22,6 +22,7 @@ const Header = () => {
   // url path change sidemenu close
   useEffect(() => {
     closeMenuEvent()
+    window.scrollTo(0, 0)
   }, [location])
 
   //outside click event
