@@ -27,3 +27,19 @@ export const loanDesc = {
   principal: "대출 원금은 매월 동일하게 상환하고, 남은 대출 원금에 대한 이자를 더해 상환하는 방식으로 매달 상환하는 금액이다른 방식입니다.",
   dateOfTime: "대출원금을 만기일에 모두 상환하는 방식으로 대출기간에는 이자만 납부하는 이자부담이 큰 상환방식입니다."
 }
+
+export const rouletteData = [
+  { option: '한식', style: { backgroundColor: '#ffcc00', textColor: '#000000' } },
+  { option: '중식', style: { backgroundColor: '#ff0000', textColor: '#ffffff' } },
+  { option: '일식', style: { backgroundColor: '#00ffff', textColor: '#000000' } },
+  { option: '양식', style: { backgroundColor: '#008000', textColor: '#ffffff' } },
+  { option: '분식', style: { backgroundColor: '#ff6600', textColor: '#ffffff' } },
+  { option: '패스트푸드', style: { backgroundColor: '#800000', textColor: '#ffffff' } },
+  { option: '뷔페', style: { backgroundColor: '#663399', textColor: '#ffffff' } },
+  { option: '초식', style: { backgroundColor: '#00ff00', textColor: '#000000' } },
+]
+
+
+
+
+

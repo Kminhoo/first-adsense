@@ -152,7 +152,7 @@ const CalcPage = () => {
     <Helmet>
       <title>대출 이자 계산기</title>
     </Helmet>
-    <main className='main'>
+    <main className='main-calc'>
       <section className='loan-calc'>
         <div className='calc-inner'>
 
