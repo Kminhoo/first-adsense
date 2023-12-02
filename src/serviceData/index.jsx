@@ -29,14 +29,14 @@ export const loanDesc = {
 }
 
 export const rouletteData = [
-  { option: '한식', style: { backgroundColor: '#ffcc00', textColor: '#000000' } },
-  { option: '중식', style: { backgroundColor: '#ff0000', textColor: '#ffffff' } },
-  { option: '일식', style: { backgroundColor: '#00ffff', textColor: '#000000' } },
-  { option: '양식', style: { backgroundColor: '#008000', textColor: '#ffffff' } },
-  { option: '분식', style: { backgroundColor: '#ff6600', textColor: '#ffffff' } },
-  { option: '패스트푸드', style: { backgroundColor: '#800000', textColor: '#ffffff' } },
-  { option: '뷔페', style: { backgroundColor: '#663399', textColor: '#ffffff' } },
-  { option: '초식', style: { backgroundColor: '#00ff00', textColor: '#000000' } },
+  { option: '한식', style: { backgroundColor: '#ffffff', textColor: '#000000' } },
+  { option: '중식', style: { backgroundColor: '#D2E0FB', textColor: '#000000' } },
+  { option: '일식', style: { backgroundColor: '#ffffff', textColor: '#000000' } },
+  { option: '양식', style: { backgroundColor: '#D2E0FB', textColor: '#000000' } },
+  { option: '분식', style: { backgroundColor: '#ffffff', textColor: '#000000' } },
+  { option: '패스트푸드', style: { backgroundColor: '#D2E0FB', textColor: '#000000' } },
+  { option: '뷔페', style: { backgroundColor: '#ffffff', textColor: '#000000' } },
+  { option: '초식', style: { backgroundColor: '#D2E0FB', textColor: '#000000' } },
 ]
 
 
