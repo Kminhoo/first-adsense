@@ -35,7 +35,8 @@ const Roulette = () => {
 
   // 이어서 작성하기
   const handleStopSpinning = () => {
-    const confirmResult = window.confirm('선택된 메뉴의 상세 메뉴들을 보시겠습니까?');
+    console.log(setData)
+    // const confirmResult = window.confirm('선택된 메뉴의 상세 메뉴들을 보시겠습니까?');
   }
   
 
