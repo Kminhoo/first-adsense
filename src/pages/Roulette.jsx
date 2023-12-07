@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { Wheel } from 'react-custom-roulette'
 
 import DisplayAds from '../components/DisplayAds'
+import StopSpin from '../components/StopSpin'
 import { rouletteData } from '../serviceData'
 
 import './Roulette.css'
@@ -10,13 +11,19 @@ import './Roulette.css'
 const Roulette = () => {
 
   // roulette menu data
-  const [data, setData] = useState(rouletteData)
+  // const [data, setData] = useState(rouletteData)
+  const data = rouletteData
+
+  const [foodOption, setFoodOption] = useState()
 
   // roulette spin start
   const [startSpin, setStartSpin] = useState(false)
 
-  // prize arr num
-  const [prizeNumber, setPrizeNumber] = useState();
+  // prize num
+  const [prizeNumber, setPrizeNumber] = useState()
+
+  // detail roulette state
+  const [detailMenu, setDetailMenu] = useState(false)
 
 
   // roulette spin
@@ -31,12 +38,18 @@ const Roulette = () => {
   const resetRoulette = () => {
     setStartSpin(false)
     setPrizeNumber()
+    setDetailMenu(false)
+    setFoodOption()
   }
 
   // 이어서 작성하기
   const handleStopSpinning = () => {
-    console.log(setData)
-    // const confirmResult = window.confirm('선택된 메뉴의 상세 메뉴들을 보시겠습니까?');
+    const confirmResult = window.confirm(`${data[prizeNumber].option}메뉴가 선택되 었습니다. 상세한 메뉴를 볼까요?`);
+
+    if (confirmResult) {
+      setDetailMenu(true)
+      setFoodOption(data[prizeNumber].detailMenu)
+    }
   }
   
 
@@ -82,6 +95,7 @@ const Roulette = () => {
             </div>
           </div>
 
+          {detailMenu && (<StopSpin data={foodOption}/>)}
           {/* plus roulette */}
 
           <div className='google-ads'>
