@@ -1,15 +1,14 @@
-const fetch = require('node-fetch');
+import fetch from 'node-fetch';
 
-exports.handler = async function(event, context) {
+export async function handler(event, context) {
   const { drwNo } = event.queryStringParameters;
 
   try {
     const response = await fetch(`https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=${drwNo}`);
     const data = await response.json();
 
-    //log 출력
-    console.log(data)
-
+    console.log(data) //log 출력
+    
     return {
       statusCode: 200,
       body: JSON.stringify(data),
@@ -21,4 +20,3 @@ exports.handler = async function(event, context) {
     }
   }
 };
-
