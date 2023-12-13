@@ -34,7 +34,7 @@ const LottoPage = () => {
   // 메모이제이션된 fetchLotto 함수를 생성합니다.
   const fetchLotto = useCallback(async () => {
     const round = getLottoRoundNumber()
-    const res = await fetch(`/.netlify/functions/getLottoNumber?drwNo=${round}`)
+    const res = await fetch(`/.netlify/functions/getLotto?drwNo=${round}`)
     const data = await res.json()
     setPrevNumber(data)
     console.log(data)
