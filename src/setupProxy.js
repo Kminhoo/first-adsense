@@ -5,11 +5,11 @@ module.exports = function(app) {
     '/common.do',
     createProxyMiddleware({
       target: 'https://www.dhlottery.co.kr',
-      changeOrigin: true,
-      secure: false,
-      pathRewrite: {
-        '^/common.do': '/common.do',
-      },
+      // changeOrigin: true,
+      // secure: false,
+      // pathRewrite: {
+      //   '^/common.do': '/common.do',
+      // },
     })
   );
 };

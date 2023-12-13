@@ -6,6 +6,10 @@ exports.handler = async function(event, context) {
   try {
     const response = await fetch(`https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=${drwNo}`);
     const data = await response.json();
+
+    //log 출력
+    console.log(data)
+
     return {
       statusCode: 200,
       body: JSON.stringify(data),

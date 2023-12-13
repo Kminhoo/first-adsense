@@ -25,12 +25,13 @@ const LottoPage = () => {
   // fetch prev lotto number
   // const fetchLotto = async () => {
   //   const round = getLottoRoundNumber()
-  //   // const res = await fetch(`/common.do?method=getLottoNumber&drwNo=${round}`)
-  //   const res = await fetch(`/.netlify/functions/getLottoNumber?drwNo=${round}`)
+  //   const res = await fetch(`/common.do?method=getLottoNumber&drwNo=${round}`)
+  //   // const res = await fetch(`/.netlify/functions/getLottoNumber?drwNo=${round}`)
   //   const data = await res.json()
   //   setPrevNumber(data)
   //   console.log(data)
   // }
+
   // 메모이제이션된 fetchLotto 함수를 생성합니다.
   const fetchLotto = useCallback(async () => {
     const round = getLottoRoundNumber()
