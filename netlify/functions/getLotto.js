@@ -1,13 +1,14 @@
-const axios = require('axios');
+const fetch = require('node-fetch');
 
 exports.handler = async function(event, context) {
   const { drwNo } = event.queryStringParameters;
 
   try {
-    const response = await axios.get(`https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=${drwNo}`);
+    const response = await fetch(`https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=${drwNo}`);
+    const data = await response.json();
     return {
       statusCode: 200,
-      body: JSON.stringify(response.data),
+      body: JSON.stringify(data),
     }
   } catch (error) {
     return {
@@ -16,3 +17,4 @@ exports.handler = async function(event, context) {
     }
   }
 };
+
