@@ -11,15 +11,20 @@ const LottoPage = () => {
 
   // get lotto round func
   const getLottoRoundNumber = () => {
-    // 2023년 12월 2일 1096회차 기준
-    const baseDate = new Date(2023, 11, 2) 
-    const baseRound = 1096
+    // 1000 회차를 기준
+    const baseDate = new Date(2022, 0, 29) 
+    const baseRound = 1000
 
     const currentDate = new Date() 
     const diffTime = currentDate.getTime() - baseDate.getTime()
-    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
+    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24))
 
-    return baseRound + Math.floor(diffDays / 7)
+    // 현재 요일이 토요일이고 현재 시간이 오후 9시 이전인 경우
+    if (currentDate.getDay() === 6 && currentDate.getHours() < 21) {
+      return baseRound + Math.floor(diffDays / 7) - 1
+    } else {
+      return baseRound + Math.floor(diffDays / 7)
+    }
   }
 
   // fetch prev lotto number
@@ -45,6 +50,10 @@ const LottoPage = () => {
   useEffect(() => {
     fetchLotto()
   }, [fetchLotto])
+
+  // useEffect(() => {
+  //   fetchLotto()
+  // }, [])
 
 
   const seletedBallColor = (num) => {
@@ -77,20 +86,28 @@ const LottoPage = () => {
           </div>
 
           <div className='lotto-prev-info'>
-            <h4>{prevNumber.drwNo}회차 : ({prevNumber.drwNoDate})</h4>
-            <div>
-              <p>당첨번호 :</p>
-              <ul>
-                <li className={seletedBallColor(prevNumber.drwtNo1)}>{prevNumber.drwtNo1}</li>
-                <li className={seletedBallColor(prevNumber.drwtNo2)}>{prevNumber.drwtNo2}</li>
-                <li className={seletedBallColor(prevNumber.drwtNo3)}>{prevNumber.drwtNo3}</li>
-                <li className={seletedBallColor(prevNumber.drwtNo4)}>{prevNumber.drwtNo4}</li>
-                <li className={seletedBallColor(prevNumber.drwtNo5)}>{prevNumber.drwtNo5}</li>
-                <li className={seletedBallColor(prevNumber.drwtNo6)}>{prevNumber.drwtNo6}</li>
-                <li className={seletedBallColor(prevNumber.bnusNo)}>+ {prevNumber.bnusNo}</li>
-              </ul>
+            <h4>{prevNumber.drwNo}회차({prevNumber.drwNoDate})</h4>
+            <div className='prev-lotto-num'>
+              <div>
+                <p>당첨번호:</p>
+                <ul>
+                  <li className={seletedBallColor(prevNumber.drwtNo1)}>{prevNumber.drwtNo1}</li>
+                  <li className={seletedBallColor(prevNumber.drwtNo2)}>{prevNumber.drwtNo2}</li>
+                  <li className={seletedBallColor(prevNumber.drwtNo3)}>{prevNumber.drwtNo3}</li>
+                  <li className={seletedBallColor(prevNumber.drwtNo4)}>{prevNumber.drwtNo4}</li>
+                  <li className={seletedBallColor(prevNumber.drwtNo5)}>{prevNumber.drwtNo5}</li>
+                  <li className={seletedBallColor(prevNumber.drwtNo6)}>{prevNumber.drwtNo6}</li>
+                  <li>
+                    <span style={{
+                      color: 'black',
+                      fontWeight: 'bold'
+                    }}>+</span>
+                  </li>
+                  <li className={seletedBallColor(prevNumber.bnusNo)}>{prevNumber.bnusNo}</li>
+                </ul>
+              </div>
+              <p>1등 당첨금액 : <span>{prevNumber.firstWinamnt ? (prevNumber.firstWinamnt).toLocaleString('ko-KR') : '데이터 로딩중...'} 원</span></p>
             </div>
-            <p>1등 당첨금액 : <span>{(prevNumber.firstWinamnt)} 원</span></p>
           </div>
 
           <div className='lotto-container'>
